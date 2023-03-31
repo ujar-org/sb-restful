@@ -4,7 +4,7 @@
 
     <groupId>org.ujar.boot</groupId>
     <artifactId>ujar-boot-restful</artifactId>
-    <version>0.2.0-SNAPSHOT</version>
+    <version>23.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>ujar-boot-restful</name>
@@ -32,24 +32,20 @@
     </developers>
 
     <parent>
-        <groupId>org.ujar.parent</groupId>
-        <artifactId>ujar-parent-pom</artifactId>
-        <version>0.2.0-SNAPSHOT</version>
+        <groupId>org.ujar.boot</groupId>
+        <artifactId>ujar-boot-parent-pom</artifactId>
+        <version>23.0.0-SNAPSHOT</version>
         <relativePath/>
     </parent>
 
     <dependencies>
         <dependency>
+            <groupId>org.ujar.boot</groupId>
+            <artifactId>ujar-boot-build</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -104,6 +100,22 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
