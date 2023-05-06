@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.ujar.boot</groupId>
-    <artifactId>ujar-boot-restful</artifactId>
+    <artifactId>boot-restful</artifactId>
     <version>23.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>ujar-boot-restful</name>
+    <name>boot-restful</name>
     <description>RESTful API Libraries</description>
     <licenses>
         <license>
@@ -33,7 +33,7 @@
 
     <parent>
         <groupId>org.ujar.boot</groupId>
-        <artifactId>ujar-boot-parent-pom</artifactId>
+        <artifactId>boot-parent-pom</artifactId>
         <version>23.0.0-SNAPSHOT</version>
         <relativePath/>
     </parent>
@@ -41,7 +41,7 @@
     <dependencies>
         <dependency>
             <groupId>org.ujar.boot</groupId>
-            <artifactId>ujar-boot-build</artifactId>
+            <artifactId>boot-build</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
