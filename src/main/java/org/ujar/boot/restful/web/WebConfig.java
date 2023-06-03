@@ -7,4 +7,5 @@ import org.ujar.boot.build.BuildInfoConfig;
 @Configuration
 @Import({BuildInfoConfig.class, DefaultRestfulErrorHandler.class})
 public class WebConfig {
+
 }
