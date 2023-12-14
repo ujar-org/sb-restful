@@ -1,4 +1,4 @@
-package org.ujar.boot.restful.web;
+package org.iqkv.boot.restful.web;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
