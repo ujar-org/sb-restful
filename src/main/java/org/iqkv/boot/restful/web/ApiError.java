@@ -1,4 +1,4 @@
-package org.ujar.boot.restful.web;
+package org.iqkv.boot.restful.web;
 
 import java.time.LocalDateTime;
 

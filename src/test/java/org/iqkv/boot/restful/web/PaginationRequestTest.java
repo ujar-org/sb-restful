@@ -1,10 +1,9 @@
-package org.ujar.boot.restful.web;
+package org.iqkv.boot.restful.web;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.ujar.boot.restful.web.PaginationRequest;
 
 class PaginationRequestTest {
   private PaginationRequest dto;

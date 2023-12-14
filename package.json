@@ -1,5 +1,5 @@
 {
-    "name": "boot-restful",
+    "name": "@know-how-spring-boot/boot-restful",
     "version": "23.0.0",
     "description": "Provide an optional Git commit hooks.",
     "private": true,
