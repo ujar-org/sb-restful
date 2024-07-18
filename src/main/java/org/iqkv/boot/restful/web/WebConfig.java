@@ -5,7 +5,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@Import({BuildInfoConfig.class, DefaultRestfulErrorHandler.class})
+@Import({BuildInfoConfig.class,
+    DefaultRestfulErrorHandler.class,
+    DateTimeFormatConfiguration.class,
+    JacksonConfiguration.class})
 public class WebConfig {
 
 }
