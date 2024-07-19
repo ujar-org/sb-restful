@@ -1,5 +1,6 @@
 package org.iqkv.boot.web.rest.errors;
 
+import java.io.Serial;
 import java.net.URI;
 
 import org.iqkv.boot.web.rest.errors.ProblemDetailWithCause.ProblemDetailWithCauseBuilder;
@@ -9,6 +10,7 @@ import org.springframework.web.ErrorResponseException;
 @SuppressWarnings("java:S110") // Inheritance tree of classes should not be too deep
 public class BadRequestAlertException extends ErrorResponseException {
 
+  @Serial
   private static final long serialVersionUID = 1L;
 
   private final String entityName;
