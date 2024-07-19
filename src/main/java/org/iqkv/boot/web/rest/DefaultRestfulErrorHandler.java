@@ -1,4 +1,4 @@
-package org.iqkv.boot.restful.web;
+package org.iqkv.boot.web.rest;
 
 import jakarta.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;

@@ -1,4 +1,4 @@
-package org.iqkv.boot.restful.web.errors;
+package org.iqkv.boot.web.rest.errors;
 
 import java.net.URI;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package org.iqkv.boot.restful.web.errors;
+package org.iqkv.boot.web.rest.errors;
 
 @SuppressWarnings("java:S110") // Inheritance tree of classes should not be too deep
 public class EmailAlreadyUsedException extends BadRequestAlertException {
