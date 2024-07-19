@@ -1,4 +1,4 @@
-package org.iqkv.boot.restful.web;
+package org.iqkv.boot.web.rest;
 
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpHeaders;

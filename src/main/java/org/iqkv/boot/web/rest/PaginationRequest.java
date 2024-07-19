@@ -1,4 +1,4 @@
-package org.iqkv.boot.restful.web;
+package org.iqkv.boot.web.rest;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;

@@ -1,4 +1,4 @@
-package org.iqkv.boot.restful.web;
+package org.iqkv.boot.web.rest;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;

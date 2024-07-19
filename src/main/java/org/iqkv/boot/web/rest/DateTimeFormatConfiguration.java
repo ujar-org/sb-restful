@@ -1,4 +1,4 @@
-package org.iqkv.boot.restful.web;
+package org.iqkv.boot.web.rest;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;

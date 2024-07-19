@@ -1,6 +1,6 @@
-package org.iqkv.boot.restful.web.errors;
+package org.iqkv.boot.web.rest.errors;
 
-import org.iqkv.boot.restful.web.errors.ProblemDetailWithCause.ProblemDetailWithCauseBuilder;
+import org.iqkv.boot.web.rest.errors.ProblemDetailWithCause.ProblemDetailWithCauseBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.ErrorResponseException;
 
