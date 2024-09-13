@@ -30,7 +30,7 @@ public class JacksonConfiguration {
    * Support for Hibernate types in Jackson.
    */
   @Bean
-  @ConditionalOnClass(value = org.hibernate.engine.spi.Mapping.class)
+  @ConditionalOnClass(name = "org.hibernate.engine.spi.Mapping")
   public Hibernate6Module hibernate6Module() {
     return new Hibernate6Module().configure(Feature.SERIALIZE_IDENTIFIER_FOR_LAZY_NOT_LOADED_OBJECTS, true);
   }
