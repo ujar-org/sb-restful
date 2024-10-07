@@ -12,7 +12,7 @@ import org.springframework.http.HttpHeaders;
  */
 public final class HeaderUtil {
 
-  private static final Logger log = LoggerFactory.getLogger(HeaderUtil.class);
+  private static final Logger LOG = LoggerFactory.getLogger(HeaderUtil.class);
 
   private HeaderUtil() {
   }
@@ -107,7 +107,7 @@ public final class HeaderUtil {
       String errorKey,
       String defaultMessage
   ) {
-    log.error("Entity processing failed, {}", defaultMessage);
+    LOG.error("Entity processing failed, {}", defaultMessage);
 
     String message = enableTranslation ? "error." + errorKey : defaultMessage;
 

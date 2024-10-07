@@ -19,8 +19,8 @@ class LogbackRecorderTest {
   private static final String[] TEST_MESSAGES = {"error", "warn", "info", "debug", "trace"};
   private static final Object[] TEST_ARGUMENTS = {null, true, 1, 2D, 3F};
 
-  private final Logger log = LoggerFactory.getLogger(LogbackRecorderTest.class);
-  private final Marker marker = MarkerFactory.getMarker(log.getName());
+  private static final Logger LOG = LoggerFactory.getLogger(LogbackRecorderTest.class);
+  private static final Marker marker = MarkerFactory.getMarker(LOG.getName());
 
   private final Exception exception = new RuntimeException("Eek");
 
@@ -298,18 +298,18 @@ class LogbackRecorderTest {
   }
 
   private void write() {
-    log.error(marker, TEST_MESSAGES[0] + " {}", TEST_ARGUMENTS[0]);
-    log.warn(marker, TEST_MESSAGES[1] + " {}", TEST_ARGUMENTS[1]);
-    log.info(marker, TEST_MESSAGES[2] + " {}", TEST_ARGUMENTS[2]);
-    log.debug(marker, TEST_MESSAGES[3] + " {}", TEST_ARGUMENTS[3]);
-    log.trace(marker, TEST_MESSAGES[4] + " {}", TEST_ARGUMENTS[4]);
+    LOG.error(marker, TEST_MESSAGES[0] + " {}", TEST_ARGUMENTS[0]);
+    LOG.warn(marker, TEST_MESSAGES[1] + " {}", TEST_ARGUMENTS[1]);
+    LOG.info(marker, TEST_MESSAGES[2] + " {}", TEST_ARGUMENTS[2]);
+    LOG.debug(marker, TEST_MESSAGES[3] + " {}", TEST_ARGUMENTS[3]);
+    LOG.trace(marker, TEST_MESSAGES[4] + " {}", TEST_ARGUMENTS[4]);
   }
 
   private void writeWithException() {
-    log.error(marker, TEST_MESSAGES[0] + " {}", TEST_ARGUMENTS[0], exception);
-    log.warn(marker, TEST_MESSAGES[1] + " {}", TEST_ARGUMENTS[1], exception);
-    log.info(marker, TEST_MESSAGES[2] + " {}", TEST_ARGUMENTS[2], exception);
-    log.debug(marker, TEST_MESSAGES[3] + " {}", TEST_ARGUMENTS[3], exception);
-    log.trace(marker, TEST_MESSAGES[4] + " {}", TEST_ARGUMENTS[4], exception);
+    LOG.error(marker, TEST_MESSAGES[0] + " {}", TEST_ARGUMENTS[0], exception);
+    LOG.warn(marker, TEST_MESSAGES[1] + " {}", TEST_ARGUMENTS[1], exception);
+    LOG.info(marker, TEST_MESSAGES[2] + " {}", TEST_ARGUMENTS[2], exception);
+    LOG.debug(marker, TEST_MESSAGES[3] + " {}", TEST_ARGUMENTS[3], exception);
+    LOG.trace(marker, TEST_MESSAGES[4] + " {}", TEST_ARGUMENTS[4], exception);
   }
 }
