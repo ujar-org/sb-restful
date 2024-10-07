@@ -16,7 +16,7 @@ public class ExceptionHandlingAsyncTaskExecutor implements AsyncTaskExecutor, In
 
   static final String EXCEPTION_MESSAGE = "Caught async exception";
 
-  private final Logger log = LoggerFactory.getLogger(ExceptionHandlingAsyncTaskExecutor.class);
+  private static final Logger LOG = LoggerFactory.getLogger(ExceptionHandlingAsyncTaskExecutor.class);
 
   private final AsyncTaskExecutor executor;
 
@@ -65,7 +65,7 @@ public class ExceptionHandlingAsyncTaskExecutor implements AsyncTaskExecutor, In
    * @param e a {@link java.lang.Exception} object.
    */
   protected void handle(Exception e) {
-    log.error(EXCEPTION_MESSAGE, e);
+    LOG.error(EXCEPTION_MESSAGE, e);
   }
 
   /**
