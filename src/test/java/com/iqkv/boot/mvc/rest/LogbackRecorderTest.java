@@ -24,7 +24,7 @@ class LogbackRecorderTest {
 
   private final Exception exception = new RuntimeException("Eek");
 
-  private LogbackRecorder recorder = LogbackRecorder.forLogger(log);
+  private final LogbackRecorder recorder = LogbackRecorder.forLogger(LOG);
 
   @BeforeEach
   void setup() {
