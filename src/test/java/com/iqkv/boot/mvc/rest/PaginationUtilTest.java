@@ -44,8 +44,8 @@ class PaginationUtilTest {
         "</api/_search/example?page=7&size=50>; rel=\"last\"," +
         "</api/_search/example?page=0&size=50>; rel=\"first\"";
     assertThat(headerData).isEqualTo(expectedData);
-    List<String> xTotalCountHeaders = headers.get("X-Total-Count");
-    assertThat(xTotalCountHeaders).hasSize(1).extracting(Long::parseLong).containsExactly(400L);
+    List<String> paramTotalCountHeaders = headers.get("X-Total-Count");
+    assertThat(paramTotalCountHeaders).hasSize(1).extracting(Long::parseLong).containsExactly(400L);
   }
 
   @Test
@@ -63,8 +63,8 @@ class PaginationUtilTest {
         "</api/_search/example?query=Test1%2C%20test2&page=0&size=0>; rel=\"last\"," +
         "</api/_search/example?query=Test1%2C%20test2&page=0&size=0>; rel=\"first\"";
     assertThat(headerData).isEqualTo(expectedData);
-    List<String> xTotalCountHeaders = headers.get("X-Total-Count");
-    assertThat(xTotalCountHeaders).hasSize(1).extracting(Long::parseLong).containsExactly(0L);
+    List<String> paramTotalCountHeaders = headers.get("X-Total-Count");
+    assertThat(paramTotalCountHeaders).hasSize(1).extracting(Long::parseLong).containsExactly(0L);
   }
 
   @Test
@@ -85,8 +85,8 @@ class PaginationUtilTest {
         "</api/_search/example?query=Test1%2C%20test2&page=7&size=50>; rel=\"last\"," +
         "</api/_search/example?query=Test1%2C%20test2&page=0&size=50>; rel=\"first\"";
     assertThat(headerData).isEqualTo(expectedData);
-    List<String> xTotalCountHeaders = headers.get("X-Total-Count");
-    assertThat(xTotalCountHeaders).hasSize(1).extracting(Long::parseLong).containsExactly(400L);
+    List<String> paramTotalCountHeaders = headers.get("X-Total-Count");
+    assertThat(paramTotalCountHeaders).hasSize(1).extracting(Long::parseLong).containsExactly(400L);
 
     // Page 1
     uriBuilder.queryParam("page", "1");
@@ -103,8 +103,8 @@ class PaginationUtilTest {
         "</api/_search/example?query=Test1%2C%20test2&page=7&size=50>; rel=\"last\"," +
         "</api/_search/example?query=Test1%2C%20test2&page=0&size=50>; rel=\"first\"";
     assertThat(headerData).isEqualTo(expectedData);
-    xTotalCountHeaders = headers.get("X-Total-Count");
-    assertThat(xTotalCountHeaders).hasSize(1).extracting(Long::parseLong).containsExactly(400L);
+    paramTotalCountHeaders = headers.get("X-Total-Count");
+    assertThat(paramTotalCountHeaders).hasSize(1).extracting(Long::parseLong).containsExactly(400L);
 
     // Page 6
     uriBuilder.queryParam("page", "6");
@@ -121,8 +121,8 @@ class PaginationUtilTest {
         "</api/_search/example?query=Test1%2C%20test2&page=7&size=50>; rel=\"last\"," +
         "</api/_search/example?query=Test1%2C%20test2&page=0&size=50>; rel=\"first\"";
     assertThat(headerData).isEqualTo(expectedData);
-    xTotalCountHeaders = headers.get("X-Total-Count");
-    assertThat(xTotalCountHeaders).hasSize(1).extracting(Long::parseLong).containsExactly(400L);
+    paramTotalCountHeaders = headers.get("X-Total-Count");
+    assertThat(paramTotalCountHeaders).hasSize(1).extracting(Long::parseLong).containsExactly(400L);
 
     // Page 7
     uriBuilder.queryParam("page", "7");
@@ -158,7 +158,7 @@ class PaginationUtilTest {
         "</api/_search/example?query=Test%3E%3Btest&page=0&size=0>; rel=\"last\"," +
         "</api/_search/example?query=Test%3E%3Btest&page=0&size=0>; rel=\"first\"";
     assertThat(headerData).isEqualTo(expectedData);
-    List<String> xTotalCountHeaders = headers.get("X-Total-Count");
-    assertThat(xTotalCountHeaders).hasSize(1).extracting(Long::parseLong).containsExactly(0L);
+    List<String> paramTotalCountHeaders = headers.get("X-Total-Count");
+    assertThat(paramTotalCountHeaders).hasSize(1).extracting(Long::parseLong).containsExactly(0L);
   }
 }
